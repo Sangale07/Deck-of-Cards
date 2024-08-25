@@ -13,7 +13,7 @@ public class Main {
      private String[] deck = new String[NUM_OF_CARDS];
 
      public DeckOfCards() {
-         // Initialize deck
+
          int index = 0;
          for (String suit : SUITS) {
              for (String rank : RANKS) {
@@ -22,7 +22,7 @@ public class Main {
          }
      }
      public void shuffle() {
-         // Shuffle the deck using the Random method
+
          Random random = new Random();
          for (int i = 0; i < NUM_OF_CARDS; i++) {
              int randomIndex = random.nextInt(NUM_OF_CARDS);
