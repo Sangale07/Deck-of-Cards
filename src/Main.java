@@ -3,6 +3,14 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Deck of Cards Program");
+        DeckOfCards deckOfCards = new DeckOfCards();
+        deckOfCards.shuffle();
+
+        int players = 4;
+        int cardsPerPlayer = 9;
+        String[][] playerCards = deckOfCards.distributeCards(players, cardsPerPlayer);
+
+        deckOfCards.printPlayerCards(playerCards);
 
     }
 }
