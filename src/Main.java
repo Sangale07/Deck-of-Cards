@@ -44,4 +44,14 @@ public class Main {
          }
          return playerCards;
      }
+     public void printPlayerCards(String[][] playerCards) {
+
+         for (int i = 0; i < playerCards.length; i++) {
+             System.out.println("Player " + (i + 1) + " has the following cards:");
+             for (int j = 0; j < playerCards[i].length; j++) {
+                 System.out.println(playerCards[i][j]);
+             }
+             System.out.println();
+         }
+     }
  }
