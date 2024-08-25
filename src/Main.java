@@ -32,4 +32,16 @@ public class Main {
              deck[randomIndex] = temp;
          }
      }
+     public String[][] distributeCards(int players, int cardsPerPlayer) {
+
+         String[][] playerCards = new String[players][cardsPerPlayer];
+         int cardIndex = 0;
+
+         for (int i = 0; i < players; i++) {
+             for (int j = 0; j < cardsPerPlayer; j++) {
+                 playerCards[i][j] = deck[cardIndex++];
+             }
+         }
+         return playerCards;
+     }
  }
