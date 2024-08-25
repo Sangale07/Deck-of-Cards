@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Deck of Cards Program");
@@ -17,6 +19,17 @@ public class Main {
              for (String rank : RANKS) {
                  deck[index++] = rank + " of " + suit;
              }
+         }
+     }
+     public void shuffle() {
+         // Shuffle the deck using the Random method
+         Random random = new Random();
+         for (int i = 0; i < NUM_OF_CARDS; i++) {
+             int randomIndex = random.nextInt(NUM_OF_CARDS);
+             // Swap the cards
+             String temp = deck[i];
+             deck[i] = deck[randomIndex];
+             deck[randomIndex] = temp;
          }
      }
  }
